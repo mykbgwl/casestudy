@@ -2,11 +2,13 @@ package com.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="UserTable")
 public class User {
-	@Id
 	private String username;
+	@Id
 	private String email;
 	private String password;
 	private String shipping_address;

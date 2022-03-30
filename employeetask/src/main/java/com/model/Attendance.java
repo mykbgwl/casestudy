@@ -2,11 +2,14 @@ package com.model;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 
 @Entity
 public class Attendance {
 	@Id
 	private int attendanceId;
+	@JsonFormat(pattern="dd-MM-yyyy")
 	private java.sql.Date attendanceDate;
 	@Enumerated(EnumType.STRING)
 	private AttendanceType status;
